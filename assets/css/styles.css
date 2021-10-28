@@ -1,0 +1,26 @@
+body html {
+  background-color: bisque;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#viewer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 700px;
+  height: 500px;
+  background-color: #000;
+  background-image: url("../img/tvStatic.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: solid 3px red;
+}
+
+/*# sourceMappingURL=styles.css.map */
