@@ -10,14 +10,28 @@
 </head>
 <body>
     <div class="wrapper">
-        <h1>Email Me That Photo!</h1>
-        <form>
-            <label for="email">Email:</label>
-            <input type="text" name="email" id="email">
-            <input type="button" id="button" value="send it' me...">
-            <input type="button" id="another" value="Give me another one">
+        <h1>Email Me TV!</h1>
+        <p>Enter your email below and click "Send Me That Image" and we will email you the image in the TV.</p>
+        <p>Don't like the image? Hit the "Change Channel" button to see another random image.</p>
+        <form id="form">
+            <input type="text" placeholder="Type Email Address Here" id="email">
+            <input type="button" id="button" value="Send Me That Image">
+            <span>Or</span>
+            <input type="button" id="another" value="Change Channel">
         </form>
-        <div id="viewer"></div>
+        <div id="tv-wrapper">
+            <img id="tv" src="assets/img/TV-old.png" alt="Television style viewer for viewing images">
+            <div id="viewer"></div>
+            <div id="attribution-container">
+                <div id="attribution"></div>
+            </div>
+            <div id="tv-message-container">
+                <span id="tv-message"></span>
+            </div>
+            <span id="unsplash-attribution">All images sourced from <a href="https://unsplash.com/">Unsplash</a></span>
+        </div>
+        
+        <div id="showcase"></div>
     </div>
 </body>
 </html>

@@ -1,5 +1,16 @@
-body html {
-  background-color: bisque;
+body {
+  background-color: orange;
+  font-family: sans-serif;
+}
+body a {
+  color: #fff;
+  text-decoration: underline;
+}
+body a:hover {
+  color: darkgrey;
+}
+body p {
+  margin: 0;
 }
 
 .wrapper {
@@ -9,18 +20,140 @@ body html {
   align-items: center;
 }
 
-#viewer {
-  display: flex;
+@font-face {
+  font-family: teletext;
+  src: url("../fonts/teletext-regular.ttf");
+}
+#email {
+  font-size: 1.5rem;
+  margin: 10px 5px;
+  outline: none;
+  background-color: darkorange;
+  height: 3rem;
+  width: 300px;
+  border: solid 3px black;
+  border-radius: 10px;
+}
+#email:focus {
+  color: antiquewhite;
+  border: solid 3px antiquewhite;
+  background-color: ligten(#FF8C00, 8%);
+}
+
+#another, #button {
+  font-size: 1rem;
+  color: black;
+  height: 3rem;
+  width: auto;
+  border: solid 3px black;
+  border-radius: 10px;
+  background-color: darkorange;
+}
+#another:hover, #button:hover {
+  color: antiquewhite;
+  border: solid 3px antiquewhite;
+  background-color: #d67600;
+}
+
+#tv-wrapper {
+  display: inline-block;
+  position: relative;
+  height: 550px;
+  width: 1000px;
+}
+#tv-wrapper #tv {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 550px;
+  width: 1000px;
+  z-index: 2;
+}
+#tv-wrapper #viewer {
+  display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 700px;
-  height: 500px;
+  position: absolute;
+  top: 52px;
+  left: 130px;
+  height: 400px;
+  width: 575px;
   background-color: #000;
   background-image: url("../img/tvStatic.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  border: solid 3px red;
+  border: solid 3px black;
+}
+#tv-wrapper #tv-message-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 100px;
+  left: 200px;
+  width: 435px;
+  height: 310px;
+  z-index: 99;
+}
+#tv-wrapper #tv-message-container #tv-message {
+  display: inline-block;
+  font-family: teletext;
+  font-size: 1.4rem;
+  background-color: black;
+  color: #fff;
+  z-index: 99;
+}
+#tv-wrapper #attribution-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 100px;
+  left: 200px;
+  width: 435px;
+  z-index: 99;
+}
+#tv-wrapper #attribution-container #attribution {
+  background-color: #000;
+  font-family: teletext;
+  color: #fff;
+  z-index: 99;
+}
+#tv-wrapper #unsplash-attribution {
+  position: absolute;
+  bottom: 5px;
+  right: 140px;
+  z-index: 3;
+}
+#tv-wrapper #unsplash-attribution a {
+  color: #000;
+}
+
+#showcase {
+  display: flex;
+  flex-wrap: wrap;
+  width: 800px;
+  height: auto;
+  background-color: darkorange;
+  margin: 30px;
+  padding: 30px;
+  border: solid 4px darkred;
+  border-radius: 30px;
+}
+#showcase h2 {
+  margin: 10px 0 20px 0;
+  font-size: 1.6rem;
+}
+#showcase .email-tag {
+  display: block;
+  width: 100%;
+}
+#showcase .thumb {
+  margin: 5px;
 }
 
 /*# sourceMappingURL=styles.css.map */
