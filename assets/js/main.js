@@ -18,7 +18,6 @@ window.onload = () => {  // on page load
     currentResponse = response  // to pass the response to functions like addImageToEmail
   })
   .catch((error) => {
-    console.log('There was an error' + error)
     error = "Error 403"? tvMessage.innerHTML = '<span>Run out of image requests, sorry. Try again soon</span>' : '<span>Sorry, the programme ran into an error. Developers should check the console log for error messages.</span>'
   })
 }
@@ -34,7 +33,6 @@ another.addEventListener('click', () =>{  // when a user clicks the "give me ano
     tvMessage.innerHTML = "";
   })
   .catch((error) => {
-    console.log('There was an error' + error)
     error = "Error 403"? tvMessage.innerHTML = '<span>Run out of image requests, sorry. Try again soon</span>' : '<span>Sorry, the programme ran into an error. Developers should check the console log for error messages.</span>'
   })
 })
@@ -113,7 +111,6 @@ function getImage(){
     xhr.onload = function() {
       if (xhr.status === 200 && xhr.readyState === 4) {
         viewer.style.backgroundImage = 'none';
-        console.log(xhr.response)
         resolve(xhr.response)
       } else {
         reject(Error(`Error ${xhr.status}: ${xhr.statusText}`))
